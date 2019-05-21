@@ -1,8 +1,8 @@
 package com.common.android.utils.extensions;
 
-import android.support.annotation.ColorRes;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
+import androidx.annotation.ColorRes;
+import androidx.annotation.Nullable;
+import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
 import android.widget.TextView;
 

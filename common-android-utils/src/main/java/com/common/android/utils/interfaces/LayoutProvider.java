@@ -1,6 +1,6 @@
 package com.common.android.utils.interfaces;
 
-import android.support.annotation.LayoutRes;
+import androidx.annotation.LayoutRes;
 
 /**
  * Created by jan.rabe on 02/02/16.

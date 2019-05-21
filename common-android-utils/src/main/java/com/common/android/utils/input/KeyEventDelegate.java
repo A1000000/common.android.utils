@@ -1,6 +1,6 @@
 package com.common.android.utils.input;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.KeyEvent;
 

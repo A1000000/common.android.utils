@@ -166,3 +166,4 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+common.android.utils.zip

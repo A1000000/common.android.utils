@@ -1,6 +1,6 @@
 package com.common.android.utils.interfaces;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 public interface TitleProvider {
 

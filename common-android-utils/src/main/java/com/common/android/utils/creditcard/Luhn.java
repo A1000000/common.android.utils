@@ -1,6 +1,6 @@
 package com.common.android.utils.creditcard;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import static android.text.TextUtils.isEmpty;
 

@@ -3,7 +3,7 @@ package com.common.android.utils.extensions;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import static com.common.android.utils.ContextHelper.getContext;
 

@@ -1,6 +1,6 @@
 package com.common.android.utils.extensions;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.common.android.utils.logging.Logger;
 

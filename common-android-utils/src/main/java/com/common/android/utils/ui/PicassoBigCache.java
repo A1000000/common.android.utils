@@ -3,8 +3,8 @@ package com.common.android.utils.ui;
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.StatFs;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.squareup.picasso.Downloader;
 import com.squareup.picasso.OkHttpDownloader;

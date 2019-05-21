@@ -1,6 +1,6 @@
 package com.common.android.utils.misc;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.text.MessageFormat;
 
