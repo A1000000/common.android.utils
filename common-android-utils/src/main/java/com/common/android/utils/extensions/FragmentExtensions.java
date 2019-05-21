@@ -207,7 +207,7 @@ final public class FragmentExtensions {
         if (!ContextHelper.isRunning.get())
             return;
 
-        command.execute(null).commit(); // intended 'null' so we can decorate in arbitrary order
+        command.execute(null).commitAllowingStateLoss(); // intended 'null' so we can decorate in arbitrary order
         printBackStack();
     }
 
