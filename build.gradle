@@ -1,33 +1,28 @@
 buildscript {
     repositories {
         jcenter()
-        maven { url "https://plugins.gradle.org/m2/" }
+        google()
+        maven { url "https://jitpack.io" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:4.1.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
-        classpath 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
 
     // Exclude the version that the android plugin depends on.
-    // #https://github.com/evant/gradle-retrolambda/issues/96
     configurations.classpath.exclude group: 'com.android.tools.external.lombok'
 }
 
 allprojects {
     repositories {
         jcenter()
-        maven { url 'https://maven.fabric.io/public' }
-        maven { url "https://plugins.gradle.org/m2/" }
-        maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
+        google()
         maven { url "https://jitpack.io" }
     }
 }
 
 
-task wrapper(type: Wrapper) {
+wrapper {
     gradleVersion = '3.1'
 }
 

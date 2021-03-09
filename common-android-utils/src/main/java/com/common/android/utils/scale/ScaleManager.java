@@ -1,8 +1,8 @@
 package com.common.android.utils.scale;
 
 import android.graphics.Matrix;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * Created by yqritc on 2015/06/12.
