@@ -11,12 +11,10 @@ import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable;
-
 /**
  * Created by stefan.ehrhart on 27.05.15.
  */
-public class SpriteImageView extends ImageView {
+public class SpriteImageView extends androidx.appcompat.widget.AppCompatImageView {
 
     Rect mDestinationRect, mSourceRect;
     Bitmap mBitmap;
@@ -51,8 +49,8 @@ public class SpriteImageView extends ImageView {
     public void setImageDrawable(@Nullable final Drawable drawable) {
         if (drawable instanceof BitmapDrawable)
             mBitmap = ((BitmapDrawable) drawable).getBitmap();
-        if (drawable instanceof GlideBitmapDrawable)
-            mBitmap = ((GlideBitmapDrawable) drawable).getBitmap();
+        if (drawable instanceof BitmapDrawable)
+            mBitmap = ((BitmapDrawable) drawable).getBitmap();
     }
 
     @Override

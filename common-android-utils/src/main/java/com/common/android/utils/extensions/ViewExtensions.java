@@ -781,11 +781,11 @@ final public class ViewExtensions {
 
 
     public static void setRoundedImage(@NonNull final ImageView imageView, @DrawableRes final int drawable) {
-        Glide.with(getContext()).load(drawable).asBitmap().centerCrop().into(createRoundImageTarget(imageView));
+        Glide.with(getContext()).asBitmap().load(drawable).centerCrop().into(createRoundImageTarget(imageView));
     }
 
     public static void setRoundedImage(@NonNull final ImageView imageView, @NonNull final String url) {
-        Glide.with(getContext()).load(url).asBitmap().centerCrop().into(createRoundImageTarget(imageView));
+        Glide.with(getContext()).asBitmap().load(url).centerCrop().into(createRoundImageTarget(imageView));
     }
 
     @NonNull
