@@ -7,10 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.squareup.picasso.Downloader;
-import com.squareup.picasso.OkHttpDownloader;
+import com.squareup.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Picasso.Builder;
-import com.squareup.picasso.UrlConnectionDownloader;
 
 import java.io.File;
 
@@ -29,16 +28,14 @@ public enum PicassoBigCache {
 
     private Picasso picassoInstance;
 
-    @NonNull
     static Downloader createBigCacheDownloader() {
         try {
-            Class.forName("com.squareup.okhttp.OkHttpClient");
+            Class.forName("okhttp3.OkHttpClient");
             final File cacheDir = createDefaultCacheDir(BIG_CACHE_PATH);
             final long cacheSize = calculateDiskCacheSize(cacheDir);
-            final OkHttpDownloader downloader = new OkHttpDownloader(cacheDir, cacheSize);
-            return downloader;
+            return new OkHttp3Downloader(cacheDir, cacheSize);
         } catch (@NonNull final ClassNotFoundException e) {
-            return new UrlConnectionDownloader(getContext().getApplicationContext());
+            return null;
         }
     }
 
@@ -97,9 +94,12 @@ public enum PicassoBigCache {
     }
 
     private void init() {
-        final Builder builder = new Picasso.Builder(getContext().getApplicationContext());
-        builder.downloader(createBigCacheDownloader());
-        picassoInstance = builder.build();
+        Downloader downloader = createBigCacheDownloader();
+        if (getContext() != null && downloader != null) {
+            final Builder builder = new Picasso.Builder(getContext().getApplicationContext());
+            builder.downloader(downloader);
+            picassoInstance = builder.build();
+        }
     }
 
     public Picasso getPicassoBigCache() {

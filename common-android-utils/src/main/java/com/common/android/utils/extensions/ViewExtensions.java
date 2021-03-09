@@ -547,7 +547,7 @@ final public class ViewExtensions {
     }
 
     public static void setBackground(@NonNull final View view, @DrawableRes final int background) {
-        Picasso.with(ContextHelper.getContext()).load(background).into(new Target() {
+        Picasso.get().load(background).into(new Target() {
             @Override
             public void onBitmapLoaded(final Bitmap bitmap, final Picasso.LoadedFrom from) {
                 if (Build.VERSION.SDK_INT >= 16)
@@ -558,7 +558,7 @@ final public class ViewExtensions {
             }
 
             @Override
-            public void onBitmapFailed(final Drawable errorDrawable) {
+            public void onBitmapFailed(Exception e, Drawable errorDrawable) {
 
             }
 
