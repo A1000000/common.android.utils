@@ -63,7 +63,7 @@ final public class GlideExtensions {
     public static void drawImageTopCrop(@NonNull final String imageUrl, @NonNull final ImageView imageView, @ColorRes final int placeHolderColor, final int width, final int height) {
         Glide.with(imageView.getContext())
                 .load(imageUrl)
-                .transform(new CropTransformation(getContext(), width, height, CropTransformation.CropType.TOP))
+                .transform(new CropTransformation(width, height, CropTransformation.CropType.TOP))
                 .placeholder(placeHolderColor)
                 .into(imageView);
     }
