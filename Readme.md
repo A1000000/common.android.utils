@@ -14,7 +14,7 @@ A collection of commonly used static android helper methods. Mainly for android 
 	    //Original
             implementation 'com.github.kibotu:common.android.utils:-SNAPSHOT'
 	    //Customised
-            implementation 'com.github.Adviqo-app:net.kibotu.android.deviceinfo:$last_version'
+            implementation 'com.github.Adviqo-app:common.android.utils:$last_version'
     }
     
 
